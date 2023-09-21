@@ -16,6 +16,7 @@ export async function GET(
 
   const user = await prisma.user.findUnique({
     where: {
+      // @ts-ignore
       id,
     },
   });
@@ -46,6 +47,7 @@ export async function PUT(
 
   const updatedUser = await prisma.user.update({
     where: {
+      // @ts-ignore
       id,
     },
     data: {
@@ -71,6 +73,7 @@ export async function DELETE(
 
   const user = await prisma.user.findUnique({
     where: {
+      // @ts-ignore
       id,
     },
   });
@@ -79,6 +82,7 @@ export async function DELETE(
     try {
       await prisma.user.delete({
         where: {
+          // @ts-ignore
           id,
         },
       });
